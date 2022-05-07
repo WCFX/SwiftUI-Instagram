@@ -8,8 +8,37 @@
 import SwiftUI
 
 struct MainTabView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      TabView {
+        FeedView()
+          .tabItem {
+            Image(systemName: "house.fill")
+          }
+
+        SearchView()
+          .tabItem {
+            Image(systemName: "magnifyingglass")
+          }
+
+        UploadPostView()
+          .tabItem {
+            Image(systemName: "plus.square")
+
+          }
+
+        NotificationsView()
+          .tabItem {
+            Image(systemName: "suit.heart")
+          }
+
+        ProfileView()
+          .tabItem {
+            Image(systemName: "person.circle")
+          }
+      }
+      .accentColor(.black)
+
     }
 }
 
