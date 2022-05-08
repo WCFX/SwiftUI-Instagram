@@ -13,7 +13,8 @@ struct MainTabView: View {
       TabView {
         FeedView()
           .tabItem {
-            Image(systemName: "house.fill")
+            Image(systemName: "house")
+              .foregroundColor(.white)
           }
 
         SearchView()
@@ -29,7 +30,7 @@ struct MainTabView: View {
 
         NotificationsView()
           .tabItem {
-            Image(systemName: "suit.heart")
+            Image(systemName: "bolt.heart")
           }
 
         ProfileView()
@@ -38,7 +39,6 @@ struct MainTabView: View {
           }
       }
       .accentColor(.black)
-
     }
 }
 
