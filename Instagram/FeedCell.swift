@@ -54,25 +54,34 @@ struct FeedCell: View {
             Image(systemName: "paperplane")
               .font(.system(size: 20))
           })
+          Spacer()
+          Button(action: {
+//            some action here...
+          }, label: {
+            Image(systemName: "bookmark")
+              .font(.system(size: 20))
+          })
         }
         .foregroundColor(.primary)
-        .padding(.leading, 4)
+        .padding(.horizontal, 8)
+        .padding(.bottom, 4)
         // MARK: - Caption
-        VStack {
           Text("128 likes")
-            .font(.system(size: 14))
-        }
-        .padding(.horizontal)
+          .font(.system(size: 14, weight: .semibold))
+            .padding(.horizontal, 10)
         HStack {
           Text("Wagner Barboza").font(.system(size: 14, weight: .semibold))
           + Text(" Muita coletividade na quebrada, dinheiro no bolso sem miséria e é nois.")
             .font(.system(size: 15))
 
-        }.padding(.leading, 8)
+
+        }
+        .padding(.horizontal, 10)
         Text("HÁ 2 dias")
           .font(.system(size: 14))
           .foregroundColor(.gray)
-          .padding(.horizontal)
+          .padding(.leading, 10)
+          .padding(.top, 1)
       }
     }
 }
