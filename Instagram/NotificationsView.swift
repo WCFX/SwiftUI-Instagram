@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct NotificationsView: View {
+
   var body: some View {
-    Text("Notifications")
+    ScrollView {
+      LazyVStack(spacing: 30) {
+        ForEach(0 ..< 20) { _ in
+          NotificationCell()
+        }
+      }
+      .padding(.top, 30)
+    }
   }
 }
 
-struct NotificationView_Previews: PreviewProvider {
-  static var previews: some View {
-    NotificationsView()
+  struct NotificationView_Previews: PreviewProvider {
+    static var previews: some View {
+      NotificationsView()
+    }
   }
-}
